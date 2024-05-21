@@ -1,5 +1,4 @@
 // NAVBAR TRANSITION
-
 window.addEventListener('scroll', function() {
   var navbar = document.getElementById('navbar');
   var logo = document.getElementById('logo');
@@ -34,37 +33,7 @@ function scrollFunction() {
     }
 }
 
-
-
-
-
-// SCROLLED LOGO
-
-function scrollFunction() {
-    var navbar = document.getElementById("navbar");
-    var logo = document.getElementById("logo");
-
-    // When the user scrolls down 50px from the top of the document, switch to the scrolled logo
-    if (window.pageYOffset > 50) {
-        navbar.classList.add("scrolled");
-        logo.src = "https://i.postimg.cc/XJmcnNB2/Untitled-1.png"; // New logo when scrolled
-    } else {
-        navbar.classList.remove("scrolled");
-        logo.src = "https://i.postimg.cc/qvZdQPr3/Logo-name.png"; // Original logo when at the top
-    }
-}
-
-
-// Remember to call this function on window scroll
-window.onscroll = function() {
-    scrollFunction();
-};
-
-
-
-// DYNAMIC SHADOW //
-
-
+// DYNAMIC SHADOW
 document.addEventListener('DOMContentLoaded', (event) => {
   // Get all the elements that will have the dynamic shadow
   var dynamicElements = document.querySelectorAll('.dynamic-shadow');
@@ -90,8 +59,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const navbarHeight = document.getElementById('navbar').offsetHeight; // Get the navbar's height
 
@@ -108,12 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
                   top: topOffset,
                   behavior: 'smooth' // Smooth scroll to the target
               });
+              localStorage.setItem('currentSection', targetId);
           }
       });
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('section');
@@ -142,93 +108,75 @@ document.addEventListener("DOMContentLoaded", function() {
           });
       });
   });
-});
 
-
-links.forEach(link => {
-  link.classList.remove('active'); // Remove active class from all links
-});
-this.classList.add('active'); // Add active class to the clicked link
-
-
-
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
-
-// Sticky Navbar
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
-  if (window.pageYOffset > 50) {
-      navbar.classList.add('scrolled');
-  } else {
-      navbar.classList.remove('scrolled');
+  // Load the current section from localStorage
+  const currentSection = localStorage.getItem('currentSection') || '#graphic-design';
+  const currentSectionElement = document.querySelector(currentSection);
+  if (currentSectionElement) {
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+    currentSectionElement.style.display = 'block';
+    window.scrollTo({
+      top: currentSectionElement.offsetTop - document.getElementById('navbar').offsetHeight,
+      behavior: 'smooth'
+    });
   }
 });
 
+let slideIndex1 = 0;
+let slideIndex2 = 0;
+let slideIndex3 = 0;
+let slideIndex4 = 0;
+showSlides1();
+showSlides2();
+showSlides3();
+showSlides4();
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the current URL path
-  var currentPath = window.location.pathname.split("/").pop();
-
-  // Get all navigation links
-  var navLinks = document.querySelectorAll('.nav-link');
-
-  // Loop through each link
-  navLinks.forEach(function(link) {
-      // Extract the href attribute of each link
-      var linkPath = link.getAttribute('href');
-
-      // Compare the link path with the current path
-      if (linkPath === currentPath) {
-          // Add the active class to the matching link
-          link.classList.add('active');
-      }
-  });
-});
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slides[slideIndex-1].style.display = "block";  
-}
-
-// Automatic Slideshow - uncomment below if you want automatic slideshow
-
-let slideIndexAuto = 0;
-showSlidesAuto();
-
-function showSlidesAuto() {
+function showSlides1() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
-    slideIndexAuto++;
-    if (slideIndexAuto > slides.length) {slideIndexAuto = 1}    
-    slides[slideIndexAuto-1].style.display = "block";  
-    setTimeout(showSlidesAuto, 3000); // Change image every 3 seconds
+    slideIndex1++;
+    if (slideIndex1 > slides.length) { slideIndex1 = 1 }
+    slides[slideIndex1 - 1].style.display = "block";
+    setTimeout(showSlides1, 4000); // Change image every 4 seconds
 }
 
+function showSlides2() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex2++;
+    if (slideIndex2 > slides.length) { slideIndex2 = 1 }
+    slides[slideIndex2 - 1].style.display = "block";
+    setTimeout(showSlides2, 4000); // Change image every 4 seconds
+}
+
+function showSlides3() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides3");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides.length) { slideIndex3 = 1 }
+    slides[slideIndex3 - 1].style.display = "block";
+    setTimeout(showSlides3, 4000); // Change image every 4 seconds
+}
+
+function showSlides4() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides4");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides.length) { slideIndex4 = 1 }
+    slides[slideIndex4 - 1].style.display = "block";
+    setTimeout(showSlides4, 4000); // Change image every 4 seconds
+}
