@@ -3,40 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TPC Prestancia</title>
+    <title>Works - Raymond Kenny's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/css/lightgallery.min.css" />
-
 </head>
-
-<body>
+<body class="works-page">
     <nav id="navbar">
         <img class="navbar-logo" src="https://i.postimg.cc/qvZdQPr3/Logo-name.png" alt="Logo" id="logo">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="works.html">My Work</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-    <header class="hero-header">
-        <div class="hero-content">
-            
-            <h1>Raymond Kenny's</h1>
-            <p>Portfolio</p>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="works.html" class="nav-link">My Work</a></li>
+            <li><a href="about.html" class="nav-link">About Me</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="works-hero-header">
+        <div class="works-hero-content">
+            <h1>Works Page</h1>
             <!-- Add any additional content -->
         </div>
     </header>
 
 
 
-<main>
+ <main class="content-area">
     
-    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cwu6I2yLA9p/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14">
-        <!-- Content automatically fetched and styled by Instagram's embed.js -->
-    </blockquote>
-    <script async defer src="//www.instagram.com/embed.js"></script>
+    <div class="aside">
+        <a href="#graphic-design">Graphic Design</a>
+        <a href="#web-design">Web Design</a>
+        <a href="#motion-graphics">Motion Graphics</a>
+        <a href="#social-media-marketing">Social Media Marketing</a>
+    </div>
 
+    <section id="graphic-design">
+        <h2>Graphic Design</h2>
+    </section>
+
+    <section id="web-design">
+        <h2>Web Design</h2>
+    </section>
+
+    <section id="motion-graphics">
+        <h2>Motion Graphics</h2>
+        <div class="container">
+            <div class="text-content">
+                <h3>Animated Logos</h3>
+                <p>Presented here is my portfolio of motion graphics, a compilation that highlights my imaginative and enthralling motion graphics projects. By skillfully fuzing animation, visual effects, and narrative ingenuity, I bring concepts to life, giving rise to dynamic and captivating visual storytelling.</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item"><img src="https://i.postimg.cc/0yCDZPh8/LOGO-NEED.gif" alt="Description1"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/6pGZCBcb/21b21687-f793-4b91-bab4-b65b0e5685e0-rw-600.gif" alt="Description2"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/C552NccN/d16c1cbf-5e0a-4b0a-86d4-be9e3590f873-rw-600.gif" alt="Description3"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/3RT7tQGZ/d88601b1-25ef-4395-af14-dfc1fccf55f3-rw-600.gif" alt="Description1"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/3xxqMgLB/SPOTLIGHT-LOGO.gif" alt="Description2"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/nhW06N9F/SPOTLIGHT_LOGO_1.gif" alt="Description3"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/8P9ZYq61/4a8b49f2-a398-405c-acaa-5d874aa7fd5d-rw-600.gif" alt="Description1"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/yxD3M6Jn/FOX-LOGO-LOOP.gif" alt="Description2"></div>
+                <div class="grid-item"><img src="https://i.postimg.cc/zDssbtJP/6477fd5c.gif" alt="Description3"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOCIAL MEDIA-->
+
+
+    <section id="social-media-marketing">
+        <h2>Social Media Marketing</h2>
+        <div class="social-grid">
+            <div class="text-content">
+                <h2>Text Content</h2>
+                <p>Some text content goes here...</p>
+            </div>
+            <div class="flyers">
+                <div class="slideshow-container flyers-slideshow">
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/sfYhLkPJ/Heritage-Cares-Posters-Recovered.png" alt="Flyer 1">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/PJQv8Df7/Heritage-Cares-Posters-05.png" alt="Flyer 2">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="slideshow-container posts-slideshow">
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/85dYhVkK/Untitled-3.png" alt="Post 1">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/6qFQGs6p/7f877811-c34d-4c8d-9cef-65f217c3322d.jpg" alt="Post 2">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="text-content">
+                <h2>Additional Text Content</h2>
+                <p>More text content goes here...</p>
+            </div>
+            <div class="flyers">
+                <div class="slideshow-container flyers-slideshow">
+                    <div class="mySlides">
+                        <img src="https://example.com/flyer3.jpg" alt="Flyer 3">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://example.com/flyer4.jpg" alt="Flyer 4">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="slideshow-container posts-slideshow">
+                    <div class="mySlides">
+                        <img src="https://example.com/post3.jpg" alt="Post 3">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://example.com/post4.jpg" alt="Post 4">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+                
+               
+           
+  
+       
+      
+</section>
 </main>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/js/lightgallery.min.js"></script>
+
 </body>
+
 </html>
